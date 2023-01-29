@@ -4,14 +4,23 @@
     box-sizing: border-box;
 }
 
-svg {
-    width: 20px;
-    height: 20px;
-    vertical-align: middle;
+div#container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
 }
 
 .header {
     background-color: #888;
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.header svg {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
 }
 
 .line1, .user {
@@ -24,7 +33,7 @@ svg {
 
 
 .search input {
-    width: 400px;
+    width: 300px;
     border-radius: 10px;
 }
 
@@ -75,4 +84,55 @@ ul.badge-list {
 
 .menu-item:nth-child(2), .badge:nth-child(2) {
     margin: 0 20px;
+}
+
+.dashboard {
+    padding: 1rem;
+    background-color: rgba(0, 0, 255, 0.8);
+    color: white;
+    grid-area: 1 / 1 / 3 / 2;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+
+.dashboard ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.dashboard svg:first-of-type {
+    width: 2rem;
+    height: 2rem;
+    vertical-align: middle;
+}
+
+.dashboard svg path {
+    fill: white
+}
+
+.dashboard h3 {
+    margin-bottom: -1em;
+}
+
+.dashboard h3, .nav-item {
+    font-size: larger;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: start;
+}
+
+.nav-item a {
+    font-family: roboto;
+    color: inherit;
+    text-decoration: none;
+}
+
+.dashboard:hover a {
+    display: none;
 }
