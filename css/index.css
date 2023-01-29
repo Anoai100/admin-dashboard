@@ -4,8 +4,13 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #000;
+}
+
 div#container {
-    width: 100vw;
+    margin: auto;
+    width: 70vw;
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 4fr;
